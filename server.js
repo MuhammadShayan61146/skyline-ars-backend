@@ -1,5 +1,3 @@
-const cors = require("cors");
-app.use(cors());
 // ============================================================
 //  server.js  —  SKYLINE ARS Express Backend
 //  Deploy on Railway · API consumed by React Frontend on Vercel
@@ -7,7 +5,6 @@ app.use(cors());
 require("dotenv").config();
 
 const express    = require("express");
-const cors       = require("cors");
 const helmet     = require("helmet");
 const morgan     = require("morgan");
 const rateLimit  = require("express-rate-limit");
@@ -43,7 +40,6 @@ const allowedOrigins = [
 ];
 
 app.use(
-  cors({
     origin: (origin, callback) => {
       // Allow requests with no origin (Postman, Railway health checks)
       if (!origin || allowedOrigins.includes(origin)) {
@@ -121,4 +117,3 @@ app.listen(PORT, () => {
 });
 
 module.exports = app;
-const cors = require('cors');

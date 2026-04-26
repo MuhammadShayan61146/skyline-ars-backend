@@ -1,3 +1,5 @@
+const cors = require("cors");
+app.use(cors());
 // ============================================================
 //  server.js  —  SKYLINE ARS Express Backend
 //  Deploy on Railway · API consumed by React Frontend on Vercel
@@ -120,4 +122,3 @@ app.listen(PORT, () => {
 
 module.exports = app;
 const cors = require('cors');
-app.use(cors());

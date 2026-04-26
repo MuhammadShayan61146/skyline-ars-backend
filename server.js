@@ -119,3 +119,5 @@ app.listen(PORT, () => {
 });
 
 module.exports = app;
+const cors = require('cors');
+app.use(cors());
